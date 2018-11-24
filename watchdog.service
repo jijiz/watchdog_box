@@ -1,0 +1,13 @@
+V[Unit]
+Description=Serice watchdog 4g
+After=network.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+RemainAfterExit=yes
+ExecStart=sudo python /home/pi/watchdog_4g.py
+
+[Install]
+WantedBy=multi-user.target
